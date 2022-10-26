@@ -9,6 +9,7 @@ ROBUST_SCALERS_PATH = "pickle_files/robust_scalers.pkl"
 UNIQUE_VALUES_IN_COLUMNS_PATH = "pickle_files/uniq_values.pkl"
 
 FAKE_DATA_FOLDER_PATH = "csv/fake"
+FAKE_DATA_PATH_1_000 = "csv/fake/fake_data_1000.csv"
 FAKE_DATA_PATH_1_000_000 = "csv/fake/fake_data_1_000_000.csv"
 FAKE_DATA_PATH_10_000_000 = "csv/fake/fake_data_10_000_000.csv"
 

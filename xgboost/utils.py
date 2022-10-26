@@ -27,5 +27,5 @@ def fake_data_generator(df, row_size):
     new_df["TotalCharges"] = new_df["MonthlyCharges"]
     new_df.to_csv(f"{FAKE_DATA_FOLDER_PATH}/fake_data_{row_size}.csv", index=False)
 
-data = pd.read_csv("csv/WA_Fn-UseC_-Telco-Customer-Churn.csv")
+data = pd.read_csv("csv/WA_lsFn-UseC_-Telco-Customer-Churn.csv")
 fake_data_generator(df=data,row_size=1000)
