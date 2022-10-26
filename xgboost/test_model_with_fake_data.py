@@ -1,5 +1,5 @@
 from process import process_data
-from constant import MODEL_PATH, FAKE_DATA_PATH_10_000_000, FAKE_DATA_PATH_1_000_000
+from constant import MODEL_PATH,FAKE_DATA_PATH_1_000 ,FAKE_DATA_PATH_10_000_000, FAKE_DATA_PATH_1_000_000
 from utils import elapsed_time
 
 import pandas as pd
@@ -14,6 +14,8 @@ def test_with_fake_data(data_path):
     time, new_df = elapsed_time(lambda: process_data(df))
     print("Time of processing data: %.2fs" % time)
 
+    new_df= new_df.drop(['customerID'],axis=1)
+    
     time, result = elapsed_time(lambda: model.predict(new_df))
     print("Time of prediction: %.2fs" % time)
     print(f"Result list: {result} - Length of result: {len(result)}")
@@ -23,8 +25,8 @@ def test_with_fake_data(data_path):
 print("1K Data")
 test_with_fake_data(data_path = FAKE_DATA_PATH_1_000)
 
-print("\n1M Data")
-test_with_fake_data(data_path = FAKE_DATA_PATH_1_000_000)
+#print("\n1M Data")
+#test_with_fake_data(data_path = FAKE_DATA_PATH_1_000_000)
 
-print("\n10M Data")
-test_with_fake_data(data_path = FAKE_DATA_PATH_10_000_000)
+#print("\n10M Data")
+#test_with_fake_data(data_path = FAKE_DATA_PATH_10_000_000)
