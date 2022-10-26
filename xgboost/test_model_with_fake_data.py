@@ -19,7 +19,11 @@ def test_with_fake_data(data_path):
     print(f"Result list: {result} - Length of result: {len(result)}")
     print(f"count '0': {list(result).count(0)} - count '1': {list(result).count(1)}")
 
-print("1M Data")
+
+print("1K Data")
+test_with_fake_data(data_path = FAKE_DATA_PATH_1_000)
+
+print("\n1M Data")
 test_with_fake_data(data_path = FAKE_DATA_PATH_1_000_000)
 
 print("\n10M Data")
